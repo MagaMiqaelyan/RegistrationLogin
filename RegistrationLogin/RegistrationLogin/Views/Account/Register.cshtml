@@ -1,0 +1,44 @@
+﻿@model RegistrationLogin.Models.RegisterModel
+<h2>Sign Up</h2>
+<form method="post" asp-controller="Account" asp-action="Register">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div>
+        <label asp-for="FirstName"></label><br />
+        <input asp-for="FirstName" />
+        <span asp-validation-for="FirstName"></span>
+    </div>
+    <br />
+    <div>
+        <label asp-for="LastName"></label><br />
+        <input asp-for="LastName" />
+        <span asp-validation-for="LastName"></span>
+    </div>
+    <br />
+    <div>
+        <label asp-for="BirthDate"></label><br />
+        <input asp-for="BirthDate.Date" />
+        <span asp-validation-for="BirthDate.Date"></span>
+    </div>
+    <br />
+    <div>
+        <label asp-for="Email"></label><br />
+        <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <br />
+    <div>
+        <label asp-for="Password"></label><br />
+        <input asp-for="Password" />
+        <span asp-validation-for="Password"></span>
+    </div>
+    <br />
+    <div>
+        <label asp-for="PasswordConfirm"></label><br />
+        <input asp-for="PasswordConfirm" />
+        <span asp-validation-for="PasswordConfirm"></span>
+    </div>
+    <br />
+    <div>
+        <input type="submit" value="Sign Up" />
+    </div>
+</form>
